@@ -1,4 +1,4 @@
-class Human:
+class Human(object):
 	name = None
 	sex = None
 	birth_year = None
@@ -8,10 +8,14 @@ class Human:
 			return 2017 - self.birth_year
 		return None
 
-class Student:
-	pass
+class Student(Human):
 
-vova = Human()
+	def __init__(self):
+		super(Human, self).__init__()
+
+	
+
+vova = Student()
 
 vova.birth_year = 1986
 age = vova.get_age()
